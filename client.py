@@ -42,7 +42,6 @@ extended_handlers = {
     "/在哪mai": where.where_mai,
 }
 
-
 class MyClient(botpy.Client):
     async def on_ready(self):
         robot_name = self.robot.name if self.robot and hasattr(self.robot, "name") else "Unknown"
@@ -82,3 +81,5 @@ if __name__ == "__main__":
     intents = botpy.Intents(public_messages=True, guild_members=True)
     client = MyClient(intents=intents, is_sandbox=True)
     client.run(appid=config['appid'], secret=config['appsecret'])
+    
+# test comment
