@@ -69,8 +69,8 @@ async def main():
     # ==========================================
     # 在这里直接修改你的凭证与查询字段
     # ==========================================
-    USERNAME = "Cyc1one_"  
-    DIVINGFISH_DEV_TOKEN = "kIQXzLngCfPdVOHqAm9YSwFvKEi0lZ7b"  
+    USERNAME = "username"  
+    DIVINGFISH_DEV_TOKEN = ""  
 
     await get_b50(
         username=USERNAME,
