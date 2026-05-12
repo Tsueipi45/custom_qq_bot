@@ -3,7 +3,7 @@ import os
 from botpy import logging
 import time
 
-from maimai_py import PlayerIdentifier, ArcadeProvider, DivingFishProvider
+from maimai_py import PlayerIdentifier, DivingFishProvider
 from .maimai_client import maimai
 
 _log = logging.get_logger()
@@ -58,7 +58,7 @@ async def where_mai(client, message, space=None, sender=None):
         )
         return
 
-    _log.info(f"[region] 绑定信息加载成功")
+    _log.info("[region] 绑定信息加载成功")
 
     try:
         # 查询地区游玩信息
