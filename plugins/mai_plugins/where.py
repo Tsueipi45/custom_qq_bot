@@ -3,7 +3,7 @@ import os
 from botpy import logging
 import time
 
-from maimai_py import PlayerIdentifier, DivingFishProvider
+from maimai_py import PlayerIdentifier, ArcadeProvider, DivingFishProvider
 from .maimai_client import maimai
 
 _log = logging.get_logger()
@@ -63,7 +63,7 @@ async def where_mai(client, message, space=None, sender=None):
     try:
         # 查询地区游玩信息
         identifier = PlayerIdentifier(credentials=arcade_credentials)
-        regions = await maimai.regions(identifier)
+        regions = await maimai.regions(identifier, provider=ArcadeProvider())
 
         if not regions:
             msg = "⚠️ 没有查询到任何地区游玩记录。"
