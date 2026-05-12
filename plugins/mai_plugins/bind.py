@@ -1,9 +1,9 @@
 import json
 import os
 from botpy import logging
-from maimai_py import MaimaiClient, PlayerIdentifier
+from maimai_py import PlayerIdentifier
+from .maimai_client import maimai
 
-maimai = MaimaiClient()
 _log = logging.get_logger()
 USERDATA_PATH = "userdata.json"
 

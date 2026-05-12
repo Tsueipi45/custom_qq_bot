@@ -3,10 +3,10 @@ import os
 from botpy import logging
 import time
 
-from maimai_py import MaimaiClient, PlayerIdentifier, ArcadeProvider, DivingFishProvider
+from maimai_py import PlayerIdentifier, ArcadeProvider, DivingFishProvider
+from .maimai_client import maimai
 
 _log = logging.get_logger()
-maimai = MaimaiClient()
 
 USERDATA_PATH = "userdata.json"
 SETTINGS_PATH = "settings.json"

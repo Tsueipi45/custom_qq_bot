@@ -7,9 +7,6 @@ from botpy.ext.cog_yaml import read
 from botpy.message import GroupMessage
 from botpy.user import Member
 
-import maimai_py
-from maimai_py import MaimaiClient, MaimaiPlates, MaimaiScores, MaimaiSongs, PlayerIdentifier, DivingFishProvider
-
 from plugins import weather_handler, shutdown_handler, fortune_handler, picture_handler, chat_handler, help_handler
 from plugins.mai_plugins import b50, bind, upload, where
 
@@ -20,9 +17,6 @@ with open("settings.json", "r", encoding="utf-8") as f1:
 
 with open("userdata.json", "r", encoding="utf-8") as f2:
     udata = json.load(f2)
-
-maimai = MaimaiClient()
-divingfish = DivingFishProvider(developer_token=config['diving_fish_dev'])
 
 simple_handlers = {
     "/天气": weather_handler.handle_weather,
